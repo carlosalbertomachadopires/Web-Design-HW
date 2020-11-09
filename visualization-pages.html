@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>LATITUDE ANALYSIS DASHBOARD</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+        p {
+            color:black;
+            font-size: 20px
+            
+            
+        }     
+    
+        h1 {
+            color:black;
+            font-size: 40px;
+            font-weight: bold; 
+            text-align: center           
+        }
+
+        h2 {
+            color:black;
+            font-size: 30px;
+            font-weight: bold; 
+            
+        }
+
+        ul {
+            color:black;
+            font-size: 12px;
+                       
+        }
+        li {
+            color:black;
+            font-size: 16px; 
+                    
+            
+        }
+        a {
+            color:rgb(33, 113, 189);
+            font-weight: bold;           
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            
+        }
+               
+                
+    </style>
+
+    
+    <body>
+
+        <div>
+            <h1>VISUALIZATION PAGE</h1>
+        </div>
+
+        <div>
+    
+            <ul>
+                <li><a href="{{ url_for('index') }}">Landing-page</a></li>
+                <li><a href="{{ url_for('graphic_pages') }}">Visualization-pages</a></li>
+                <li><a href="{{ url_for('analysis_page') }}">Comparisons-page</a></li>
+                <li><a href="{{ url_for ('data_page') }}">Data-page</a></li>
+
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="container">
+
+            <h2>Latitude vs. X</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of the year than the northem hemisphere. This may be due to the tilt of the earth at the time of the year this data was gathered. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <a href="https://github.com/carlosalbertomachadopires/python-api-challenge/blob/master/WeatherPy/WeatherPyhomework.ipynb">Click here for more details</a>
+            <br>
+            
+            <img src="{{ url_for('static', filename='Fig1.png') }}">
+            <br>
+            <img src="{{ url_for('static', filename='Fig2.png') }}">
+            <br>
+            <img src="{{ url_for('static', filename='Fig3.png') }}">
+            <br>
+            <img src="{{ url_for('static', filename='Fig4.png') }}">
+
+        </div>
+
+    </body>
+
+    
+
+    
+
+</html>
